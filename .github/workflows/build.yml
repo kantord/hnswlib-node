@@ -16,6 +16,10 @@ jobs:
         node: ['16', '18', '20']
     steps:
     - uses: actions/checkout@v3
+    - name: set python version to 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
     - name: Setup node ${{ matrix.node }}
       uses: actions/setup-node@v3
       with:
@@ -28,6 +32,10 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
+    - name: set python version to 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
     - name: Setup node 18.x
       uses: actions/setup-node@v3
       with:
@@ -40,6 +48,10 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
+    - name: set python version to 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
     - name: Setup node 18.x
       uses: actions/setup-node@v3
       with:
